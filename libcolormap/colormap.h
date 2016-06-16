@@ -310,7 +310,7 @@ struct Diverging
        to be mapped. The midpoint of the colormap is initialized to half
        of the given data range. */
     Diverging(double min, double max)
-        : _min(min), _max(max), _midPoint((max - min) / 2.0)
+        : _min(min), _max(max), _midPoint((max + min) / 2.0)
     {
     }
 
