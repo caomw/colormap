@@ -375,7 +375,7 @@ struct Diverging
         else
             value = (value - _midPoint) / (_max - _midPoint);
 
-        assert(value >= 0.0 && value <= 1.0);
+        value = std::max(0.0, std::min(1.0, value));
 
         /* linear interpolation on adjusted control points */
         MSH result;
